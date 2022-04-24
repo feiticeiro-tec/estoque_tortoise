@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block Head %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/item.css')}}">
+{% endblock %}
+
+{% block Body %}
+    {% if message %}
+        <p class="message {{color_message}}">{{message}}</p>
+    {% endif %}
+    <table>
+        <tr>
+            <th>Index</th>
+            {% for campo in campos %}
+            <th>{{campo}}</th>
+            {% endfor %}
+            <th><a href="{{url_for('item_add')}}">Adicionar</a></th>
+            
+        </tr>
+        {% for index,item in enumerate(itens) %}
+            <tr>
+                <td>{{index}}</td>
+                {% for campo in campos %}
+                    <td>{{item.get(campo)}}</td>
+                {% endfor %}
+                <td class="td_actions"><a href="{{url_for('item_update',Id=item.get('id'))}}">Editar</a><a href="{{url_for('item_delete',Id=item.get('id'))}}">Excluir</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

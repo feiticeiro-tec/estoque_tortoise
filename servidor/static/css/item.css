@@ -1,0 +1,29 @@
+table{
+    border-spacing: 0;
+    width: 100%;
+}
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+#title{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+table tr:nth-child(odd){
+    background-color: rgba(0,0,0,.2);
+}
+.td_actions{
+    padding:0px;
+}
+.td_actions a{
+    margin: 0px 5px;
+    width: fit-content;
+}
+@media screen and (max-width: 499px){
+    html, body {
+        width: fit-content;
+        margin: auto;}
+}

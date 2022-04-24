@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: None;
+    list-style: None;
+    font-family: monospace,'Courier New', Courier;
+}
+html{
+    background-color: rgb(25,25,35);
+}
+body,html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+#Menu{
+    background-color: rgb(35, 35, 45);
+
+}
+#Menu ul{
+    display: flex;
+    justify-content: space-around;
+}
+#Menu li{
+    padding:10px;
+}
+#Menu a{
+    color:white;
+    font-weight: bold;
+}
+#Menu a:hover{
+    color:rgb(53, 231, 115);
+}
+table{
+    background-color: white;
+}
+table a{
+    color:black;
+    font-weight: bold;
+}
+table a:hover{
+    color:rgb(0, 53, 158);
+    
+}
+form{
+    display: grid;
+    width: fit-content;
+    padding: 15px;
+    background-color: white;
+    border-radius: 7px;
+    margin: auto;
+}
+.message{
+    text-align: center;
+}
+.green{
+    background-color: green;
+    color:white;
+}
+.red{
+    background-color: red;
+    color:white;
+}

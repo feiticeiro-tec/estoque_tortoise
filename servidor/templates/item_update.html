@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block Head %}
+{% endblock %}
+
+{% block Body %}
+    {% if message %}
+        <p class="message {{color_message}}">{{message}}</p>
+    {% endif %}
+    <form method="post">
+        <input type="hidden" name="id" value="{{item.id}}">
+        <input type="text" name="codigo" placeholder="Codigo" {% if item and item.codigo %}value="{{item.codigo}}"{% endif %}>
+        <input type="text" name="nome" placeholder="Nome" {% if item and item.nome %}value="{{item.nome}}"{% endif %}>
+        <input type="number" name="valor" min="0.0" step="0.01" placeholder="Valor" {% if item and item.valor %}value="{{item.valor}}"{% endif %}>
+        <input type="submit" value="Atualizar">
+    </form>
+{% endblock %}
